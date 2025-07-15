@@ -1,0 +1,27 @@
+[project]
+name = "aax-to-mp3-python"
+version = "0.1.0"
+description = "Fork of Ondrej Skalica's aax-to-mp3-python"
+readme = "README.md"
+authors = [
+    { name = "Aaron McUmber", email = "20608451+amcumber@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.2.1",
+]
+[project.scripts]
+convert-serial = "aax_to_mp3_python.convert:convert_serial"
+peak-aax = "aax_to_mp3_python.convert:peak_aax"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "aax-to-mp3-python",
+]
+
+[tool.uv.sources]
+aax-to-mp3-python = { workspace = true }
